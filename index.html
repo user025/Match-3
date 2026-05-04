@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>三消收集挑战</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="hero">
+        <p class="eyebrow">Match-3 Prototype</p>
+        <h1>三消收集挑战</h1>
+        <p class="intro">交换相邻两个元素，连成 3 个即可消除。收集目标元素，数量达成就通关。</p>
+      </section>
+
+      <section class="hud" aria-label="关卡状态">
+        <div class="hud-card target-card">
+          <span class="piece-preview piece-1" aria-hidden="true"></span>
+          <div>
+            <span class="hud-label">目标</span>
+            <strong id="targetText">蓝水滴 0/12</strong>
+          </div>
+        </div>
+        <div class="hud-card">
+          <span class="hud-label">剩余步数</span>
+          <strong id="movesText">20</strong>
+        </div>
+        <button id="resetButton" class="reset-button" type="button">重新开始</button>
+      </section>
+
+      <section class="board-panel">
+        <div id="board" class="board" aria-label="三消棋盘"></div>
+      </section>
+
+      <section class="guide" aria-label="新手引导">
+        <h2>新手提示</h2>
+        <ul>
+          <li>只能上下左右交换，不能斜着移动。</li>
+          <li>没有形成三连的交换会自动换回，且不扣步数。</li>
+          <li>每次有效消除后，上方元素会下落，顶部会补充新元素。</li>
+        </ul>
+      </section>
+    </main>
+
+    <div id="message" class="message" role="status" aria-live="polite"></div>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
