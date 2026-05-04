@@ -35,12 +35,14 @@
       </section>
 
       <section class="guide" aria-label="新手引导">
-        <h2>新手提示</h2>
-        <ul>
-          <li>只能上下左右交换，不能斜着移动。</li>
-          <li>没有形成三连的交换会自动换回，且不扣步数。</li>
-          <li>每次有效消除后，上方元素会下落，顶部会补充新元素。</li>
-        </ul>
+        <div>
+          <h2>互动新手引导</h2>
+          <p id="tutorialText">点击“开始演示”，棋盘会高亮一组可交换元素。</p>
+        </div>
+        <div class="guide-actions">
+          <button id="tutorialButton" class="guide-button primary" type="button">开始演示</button>
+          <button id="skipTutorialButton" class="guide-button" type="button">跳过</button>
+        </div>
       </section>
     </main>
 
